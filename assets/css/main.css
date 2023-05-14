@@ -1,63 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@200;400;600&display=swap');
+
 body {
-    font-family: "Dosis", sans-serif;
+    --font-body: "Playfair Display", "Georgia", "Palatino", serif;
+    --font-headings: "Poppins", "Arial", "Helvetica", sans-serif;
+    --font-cursive: "Snell Roundhand", "Apple Chancery", "URW Chancery L", "Brush Script MT", cursive;
+    --primary-color: #631C2F;
+    --primary-color-light: #b6254c;
+    font-family: var(--font-body);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+ h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    font-weight: 600;
+}
+
+section {
+    padding: 5em 0;
+}
+
+/* Typography */
+.text-standout {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 2em;
+}
+
+.wed-icon {
+    height: 1em;
+    width: 1em;
+    color: var(--primary-color-light);
 }
 
 /* Home Page Style */
-.ww-home-page {
+.landing {
     background: url("../img/IMG_7234.jpg") no-repeat center center;
     background-size: cover;
     background-position: 50%;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     height: 100vh;
     min-height: 480px;
     max-height: 1080px;
 }
 
-.ww-home-page .ww-wedding-announcement {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
+.landing-container {
+    position: relative;
     height: 100%;
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    letter-spacing: 2px;
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
 }
 
-.ww-home-page .ww-wedding-announcement .ww-announcement-container {
+.landing-couple-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /* background: rgb(99,28,47); */
+    width: fit-content;
+    min-width: 130px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-couple-box {
+    width: fit-content !important;
+    padding: 2em .2em;
+    margin: auto;
     max-width: 450px;
     width: 80%;
     text-align: center;
-/*    margin-right: 0;*/
-/*    backdrop-filter: blur(2px);*/
-    border: 5px solid white;
-    z-index: 999;
+    border: .3em solid white;
 }
 
-.ww-home-page .ww-wedding-announcement img {
-    max-height: 350px;
-    width: auto;
+.landing-couple-names {
+    font-family: var(--font-headings);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.75em;
+    color: #fff;
+    letter-spacing: .05em;
+    margin: 0;
+    padding: 0;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
 }
 
-@media (max-width: 480px) {
-    .ww-home-page .ww-wedding-announcement img {
-        max-height: 250px;
-        width: auto;
-    }
+.landing-title-container {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 5em;
+    line-height: .9em;
 }
 
-.ww-home-page .ww-wedding-announcement .ww-couple-name {
-    font-size: 70px;
+.landing-title-alt {
+    margin-left: 5px;
+    font-family: var(--font-cursive);
+    font-weight: 400;
+    font-size: .8em;
+    opacity: .8;
 }
 
-@media (max-width: 576px) {
-    .ww-home-page .ww-wedding-announcement .ww-couple-name {
-        font-size: 50px;
-    }
-}
-
-.ww-home-page:before {
+.landing:before {
     content: "";
+    /* background: rgb(99,28,47); */
     background-color: #631C2F; /* rgba(245, 138, 119, 0.2); */
-    opacity: 70%;
+    opacity: 50%;
     width: 100%;
     height: 100%;
     height: 100vh;
@@ -69,47 +126,47 @@ body {
 }
 
 /* Nav Bar Style */
-.ww-nav-bar .heart {
-    fill: #f26147;
-    position: relative;
-    top: 2px;
-    width: 40px;
-    -webkit-animation: pulse 1s ease infinite;
-    animation: pulse 1s ease infinite;
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.3);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.3);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 .ww-nav-bar .nav-item {
-    font-size: 18px;
     padding: 5px 0 5px 16px;
+    font-family: var(--font-headings);
     font-weight: 500;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Programma */
+
+.programma-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    column-gap: 1em;
+    justify-content: left;
+    align-items: center;
+}
+
+.programma-item-icon {
+    height: 3em;
+    width: 3em;
+    color: var(--primary-color-light);
+}
+
+.programma-item-text {
+    text-align: left;
+}
+
+.programma-item-title {
+    font-size: 1.25em;
+    margin-bottom: -0.3em;
+}
+
+.programma-item-orario {
+    font-family: var(--font-headings);
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--primary-color-light);
 }
 
 /* Wedding Event Style */
@@ -241,13 +298,6 @@ body {
 }
 
 /* Common Style */
-.ww-title {
-    font-family: "Great Vibes", cursive;
-}
-
-.ww-section {
-    padding: 100px 0;
-}
 
 .btn-primary {
     color: #fff;
