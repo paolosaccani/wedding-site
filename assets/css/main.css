@@ -101,7 +101,7 @@ em {
     width: fit-content !important;
     padding: 2em .2em;
     /* margin: auto; */
-    margin: 10vh auto auto auto;
+    margin: 5vh auto auto auto;
     max-width: 450px;
     width: 80%;
     text-align: center;
@@ -200,58 +200,23 @@ em {
     color: var(--primary-color-light);
 }
 
-/* Wedding Event Style */
-.ww-wedding-event ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-/* Couple Friends Style  */
-.ww-couple-friends .carousel {
-    padding: 40px 0;
-}
-
-.ww-couple-friends .carousel-indicators {
-    bottom: 0px;
-}
-
-.ww-couple-friends .carousel-indicators li {
-    background-color: #6c757d;
-}
-
-.ww-couple-friends .carousel-indicators .active {
-    background-color: #f58a77;
-}
-
 /* Photo Gallery Style */
-.ww-photo-gallery .ww-category-filter a {
-    display: inline-block;
-    margin: 0 10px 6px 0;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 3px;
-}
 
-.ww-photo-gallery .ww-gallery {
-    min-height: 500px;
-}
-
-.ww-photo-gallery .card-columns .card {
+.photo-gallery .card-columns .card {
     border: none;
     margin-bottom: 15px;
     border-radius: none;
 }
 
 @media (max-width: 992px) {
-    .ww-photo-gallery .card-columns {
+    .photo-gallery .card-columns {
         -moz-column-count: 2;
         column-count: 2;
     }
 }
 
 @media (max-width: 576px) {
-    .ww-photo-gallery .card-columns {
+    .photo-gallery .card-columns {
         -moz-column-count: 1;
         column-count: 1;
     }
