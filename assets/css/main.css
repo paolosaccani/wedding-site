@@ -19,10 +19,20 @@ section {
 
 /* Typography */
 
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6 {
-   font-family: var(--font-headings);
-   font-weight: 600;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-headings);
+    font-weight: 600;
 }
 
 em {
@@ -81,6 +91,7 @@ em {
     width: 100%;
     max-width: 1080px;
     margin: auto;
+    overflow-x: hidden;
 }
 
 .landing-couple-container {
@@ -100,7 +111,6 @@ em {
 .landing-couple-box {
     width: fit-content !important;
     padding: 2em .2em;
-    /* margin: auto; */
     margin: 5vh auto auto auto;
     max-width: 450px;
     width: 80%;
@@ -117,7 +127,7 @@ em {
     letter-spacing: .05em;
     margin: 0;
     padding: 0;
-    writing-mode:vertical-rl;
+    writing-mode: vertical-rl;
     transform: rotate(180deg);
 }
 
@@ -144,7 +154,8 @@ em {
 .landing:before {
     content: "";
     /* background: rgb(99,28,47); */
-    background-color: #631C2F; /* rgba(245, 138, 119, 0.2); */
+    background-color: #631C2F;
+    /* rgba(245, 138, 119, 0.2); */
     opacity: 50%;
     width: 100%;
     height: 100%;
@@ -154,6 +165,27 @@ em {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+@media (max-height: 740px) {
+
+    .landing-couple-container {
+        left: 0;
+        width: 100%;
+    }
+
+    .landing-couple-box {
+        padding: .2em 2em;
+    }
+    
+    .landing-couple-box span {
+        display: block;
+    }
+
+    .landing-couple-names {
+        writing-mode: horizontal-tb;
+        transform: unset;
+    }
 }
 
 /* Nav Bar Style */
