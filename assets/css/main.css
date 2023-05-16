@@ -149,7 +149,7 @@ em {
     position: absolute;
     bottom: 0;
     padding-left: 5%;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
     color: #fff;
     font-weight: 600;
     font-size: 5em;
@@ -164,7 +164,7 @@ em {
     opacity: .8;
 }
 
-@media (max-height: 670px) {
+@media (max-height: 550px) {
 
     .landing-couple-container {
         left: 0;
@@ -172,9 +172,9 @@ em {
     }
 
     .landing-couple-box {
-        padding: .2em 2em;
+        padding: 2em;
     }
-    
+
     .landing-couple-box span {
         display: block;
     }
@@ -182,6 +182,21 @@ em {
     .landing-couple-names {
         writing-mode: horizontal-tb;
         transform: unset;
+    }
+}
+
+@media (max-height: 740px) {
+
+    .landing-title-container {
+        font-size: 4em;
+    }
+
+    .landing-couple-box {
+        border: .2em solid white;
+    }
+
+    .landing-couple-names {
+        font-size: 2em;
     }
 }
 
