@@ -1,6 +1,23 @@
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
+// window.addEventListener('DOMContentLoaded', event => {
+
 $(document).ready(function() {
+
+  // Collapse responsive navbar when toggler is visible
+  const navbarToggler = document.body.querySelector('.navbar-toggler');
+
+  const responsiveNavItems = [].slice.call(
+      document.querySelectorAll('#navbar-nav .nav-item')
+  );
+  responsiveNavItems.map(function(responsiveNavItem) {
+      responsiveNavItem.addEventListener('click', () => {
+          if (window.getComputedStyle(navbarToggler).display !== 'none') {
+              navbarToggler.click();
+          }
+      });
+  });
+
   AOS.init({
     // uncomment below for on-scroll animations to played only once
     // once: true
